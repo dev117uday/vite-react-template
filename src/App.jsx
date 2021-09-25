@@ -1,23 +1,26 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-import ProtectedRoute from "./component/ProtectRoute";
-import Another from "./component/Another";
+import ProtectedRoute from "./lib/ProtectedRoute";
+import Profile from "./component/Profile";
 import Main from "./component/Main";
+import NavBar from "./component/NavBar";
 
+// TODO : add footer
 
 function App() {
   return (
-    <BrowserRouter>
-      <div className="App">
+    <div>
+      <NavBar />
+      <BrowserRouter>
         <Switch>
           <Route exact path="/" component={Main} />
-          <ProtectedRoute exact path="/an" component={Another} />
+          <ProtectedRoute exact path="/profile" component={Profile} />
           <Route path="*" component={() => {
             window.location.href = "/";
           }} />
         </Switch>
-      </div>
-    </BrowserRouter>
+      </BrowserRouter>
+    </div>
   );
 }
 

@@ -1,14 +1,13 @@
 import { initializeApp } from 'firebase/app';
 
-// TODO: Replace the following with your app's Firebase project configuration
 const firebaseConfig = {
-	apiKey: "AIzaSyCix1V3EVQLQiK_mFAhUgeh4KKSIDgtDkk",
-	authDomain: "uday-yadav.firebaseapp.com",
-	databaseURL: "https://uday-yadav.firebaseio.com",
-	projectId: "uday-yadav",
-	storageBucket: "uday-yadav.appspot.com",
-	messagingSenderId: "738163119457",
-	appId: "1:738163119457:web:58821570257679645ba120"
+	apiKey:import.meta.env.VITE_firebase_apiKey,
+	authDomain:import.meta.env.VITE_firebase_authDomain,
+	databaseURL:import.meta.env.VITE_firebase_databaseURL,
+	projectId:import.meta.env.VITE_firebase_projectId,
+	storageBucket:import.meta.env.VITE_firebase_storageBucket,
+	messagingSenderId:import.meta.env.VITE_firebase_messagingSenderId,
+	appId:import.meta.env.VITE_firebase_appId
 };
 
 let firebaseApp = initializeApp(firebaseConfig);
