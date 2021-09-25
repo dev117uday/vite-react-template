@@ -5,9 +5,6 @@ import Profile from "./component/Profile";
 import Main from "./component/Main";
 import NavBar from "./component/NavBar";
 
-// TODO : add footer
-// TODO : complete profile page
-
 function App() {
   return (
     <div>
