@@ -1,6 +1,7 @@
 {
   "name": "vite-react-firebase",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "author": "Uday Yadav",
   "scripts": {
     "dev": "vite --port=5000",
     "build": "vite build",

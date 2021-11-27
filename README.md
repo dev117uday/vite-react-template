@@ -1,6 +1,10 @@
 # Vite React Template for Projects
 
-```env
+## Setup 
+
+- Create a file named `.env` in project folder
+
+```s
 VITE_firebase_apiKey=""
 VITE_firebase_authDomain=""
 VITE_firebase_databaseURL=""

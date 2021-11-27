@@ -21,12 +21,12 @@ function NavBar() {
     signInWithPopup(auth, provider)
       .then((result) => {
         const credential = GoogleAuthProvider.credentialFromResult(result);
+
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
 
         var raw = JSON.stringify({
-          "token": credential.idToken,
-          "user": result.user.displayName
+          "idToken": credential.idToken,
         });
 
         var requestOptions = {
@@ -36,7 +36,7 @@ function NavBar() {
           redirect: 'follow'
         };
 
-        fetch(`${import.meta.env.VITE_frontend_url}/auth/authenticate`, requestOptions)
+        fetch(`${import.meta.env.VITE_frontend_url}/authenticate`, requestOptions)
           .then(response => response.text())
           .then(result => {
             localStorage.setItem('jwtToken', result);
