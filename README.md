@@ -12,5 +12,5 @@ VITE_firebase_projectId=""
 VITE_firebase_storageBucket=""
 VITE_firebase_messagingSenderId=""
 VITE_firebase_appId=""
-VITE_frontend_url=""
+VITE_backend_url=""
 ```
