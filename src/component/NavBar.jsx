@@ -27,6 +27,7 @@ function NavBar() {
 
         var raw = JSON.stringify({
           "idToken": credential.idToken,
+          "userName" : result.user.displayName
         });
 
         var requestOptions = {
