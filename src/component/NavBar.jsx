@@ -22,6 +22,8 @@ function NavBar() {
       .then((result) => {
         const credential = GoogleAuthProvider.credentialFromResult(result);
 
+        console.log(credential);
+
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
 
@@ -37,9 +39,10 @@ function NavBar() {
           redirect: 'follow'
         };
 
-        fetch(`${import.meta.env.VITE_frontend_url}/authenticate`, requestOptions)
+        fetch(`${import.meta.env.VITE_backend_url}/authenticate`, requestOptions)
           .then(response => response.text())
           .then(result => {
+            console.log(result);
             localStorage.setItem('jwtToken', result);
             localStorage.setItem('isAuth', 'true');
             setAuthState(true);
